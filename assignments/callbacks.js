@@ -69,13 +69,22 @@ function multiplyNums(x, y, cb) {
 }
 multiplyNums(4, 7, product => {
   console.log(product);
-}); 
+}) 
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  return cb()
+  if (list.includes(item)) {
+    return cb(true)
+  }
+  return cb(false)
 }
+contains('Pen', items, trueOrFalse => {
+  console.log(trueOrFalse);
+});
+contains('Pencil', items, trueOrFalse => {
+  console.log(trueOrFalse);
+});
 
 /* STRETCH PROBLEM */
 
