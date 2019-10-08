@@ -106,8 +106,8 @@ console.log(prizeForDonation)
 //The event director would like to know the average donation received in order to help plan future events. Provide this information using .reduce().
 let talliedDonations = runners.reduce((total, tallied) => {
   return (total += tallied.donation);
-}, 0);
-console.log(talliedDonations/runners.length);
+}, 0)/runners.length;
+console.log(talliedDonations);
 
 // function talliedDonations(reducedArray, cb) {
 //   return cb(reducedArray/reducedArray.length);
